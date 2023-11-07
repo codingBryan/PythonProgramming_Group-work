@@ -63,7 +63,6 @@ class Backend:
     # Removing and employee
     def remove_employee(self,id):
         try:
-            
             self.my_cursor.execute("DELETE FROM employees WHERE Id = %s", (id,)) # Executing a DELETE statement to remove the employee with the specified 'id'
             self.connection.commit()#Saving the changes to the database
             print(f"Employee with ID {id} removed successfully.")
@@ -73,7 +72,6 @@ class Backend:
     # Promoting an employee
     def promote_employee(self,id,new_rank):
         try:
-            
             self.my_cursor.execute("UPDATE employees SET employeeRank = %s WHERE Id = %s", (new_rank, id,))# Executing an UPDATE statement to change the employee's rank
             self.connection.commit() #Saving the changes to the database
             print(f"Employee with ID {id} has been promoted to {new_rank}.")
