@@ -8,7 +8,7 @@ class Backend:
         "host" : 'localhost',
         "port" : "3306",     
         "user" : 'root',
-        "passwd" : 'Hobbyist_1', #Replace this with your own password
+        "passwd" : 'your_password', #Replace this with your own password
     }
 
     # Functin to create the database
@@ -70,6 +70,7 @@ class Backend:
         except mysql.connector.Error as error:
             print(f"Error while removing employee with ID {id}: {error}")
 
+    # Promoting an employee
     def promote_employee(self,id,new_rank):
         try:
             
