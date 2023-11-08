@@ -8,10 +8,10 @@ class Backend:
         "host" : 'localhost',
         "port" : "3306",     
         "user" : 'root',
-        "passwd" : 'your_password', #Replace this with your own password
+        "passwd" : 'root_pwd', #Replace this with your own password
     }
 
-    # Functin to create the database
+    # Function to create the database
     def create_database(self, name):
         connection = mysql.connector.connect(**self.db_args)
         # Creating a cursor object to interact with the database
@@ -91,3 +91,5 @@ if __name__ == "__main__":
     backend.promote_employee(1,"Admin")  # To promote an amployee,pass the empoyee Id and the new rank
 
     backend.remove_employee(1) # Pass the employee Id to delete them
+
+

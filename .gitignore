@@ -1,0 +1,6 @@
+docker-compose.yml
+bin
+include
+lib
+lib64
+__pycache__
